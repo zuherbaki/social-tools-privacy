@@ -6,149 +6,205 @@
 <title>Privacy Policy - Social Tools</title>
 
 <style>
-    body {
-        font-family: Arial, sans-serif;
-        background: #0f172a;
-        color: #e2e8f0;
-        margin: 0;
-        padding: 0;
-        line-height: 1.7;
-    }
+:root {
+    --bg: #ffffff;
+    --text: #000000;
+    --card: #f5f5f5;
+    --gold: #d6c2a1;
+    --gold-soft: #cbb28e;
+}
 
-    .container {
-        max-width: 900px;
-        margin: auto;
-        padding: 20px;
+/* DARK MODE AMOLED */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg: #000000;
+        --text: #ffffff;
+        --card: #1B1A1F;
+        --gold: #d6c2a1;
+        --gold-soft: #cbb28e;
     }
+}
 
-    h1 {
-        color: #38bdf8;
-        text-align: center;
-    }
+body {
+    margin: 0;
+    font-family: system-ui;
+    background: var(--bg);
+    color: var(--text);
+}
 
-    h2 {
-        color: #22c55e;
-        margin-top: 30px;
-    }
+/* HEADER */
+.header {
+    text-align: center;
+    padding: 50px 20px 30px;
+}
 
-    p {
-        color: #cbd5f5;
-    }
+.header h1 {
+    font-size: 32px;
+    margin: 0;
+    color: var(--gold);
+}
 
-    .card {
-        background: #1e293b;
-        padding: 20px;
-        border-radius: 12px;
-        margin-top: 20px;
-        box-shadow: 0 0 10px rgba(0,0,0,0.4);
-    }
+.header p {
+    opacity: 0.7;
+}
 
-    .warning {
-        background: #7f1d1d;
-        padding: 15px;
-        border-radius: 10px;
-        color: #fecaca;
-        margin-top: 15px;
-    }
+/* CONTAINER */
+.container {
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+}
 
-    .footer {
-        text-align: center;
-        margin-top: 40px;
-        font-size: 14px;
-        color: #94a3b8;
+/* CARD */
+.card {
+    background: var(--card);
+    padding: 20px;
+    border-radius: 18px;
+    margin-top: 20px;
+
+    border: 1px solid rgba(255,255,255,0.06);
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,0.6),
+        inset 0 1px 0 rgba(255,255,255,0.03);
+
+    transition: 0.25s;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+}
+
+/* TITLES */
+h2 {
+    color: var(--gold-soft);
+}
+
+/* WARNING */
+.warning {
+    background: rgba(255,0,0,0.08);
+    color: #ffb4b4;
+    padding: 12px;
+    border-radius: 10px;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+/* LIST */
+ul {
+    padding-left: 20px;
+}
+
+/* FOOTER */
+.footer {
+    text-align: center;
+    margin: 50px 0 20px;
+    font-size: 14px;
+    opacity: 0.6;
+}
+
+/* ANIMATION */
+.fade {
+    opacity: 0;
+    transform: translateY(15px);
+    animation: fadeUp 0.5s forwards;
+}
+
+.fade:nth-child(1){animation-delay:0.1s;}
+.fade:nth-child(2){animation-delay:0.2s;}
+.fade:nth-child(3){animation-delay:0.3s;}
+.fade:nth-child(4){animation-delay:0.4s;}
+
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
+}
 </style>
-
 </head>
 
 <body>
 
+<div class="header">
+    <h1>Privacy Policy</h1>
+    <p>Social Tools – Your data stays yours</p>
+</div>
+
 <div class="container">
 
-<h1>Privacy Policy</h1>
-
-<div class="card">
-<p><strong>App Name:</strong> Social Tools</p>
-<p><strong>Last Updated:</strong> [PUT DATE]</p>
+<div class="card fade">
+<p><strong>App:</strong> Social Tools</p>
+<p><strong>Last Updated:</strong> April 24, 2026</p>
 </div>
 
-<div class="card">
+<div class="card fade">
 <h2>1. Introduction</h2>
-<p>Social Tools respects your privacy and is committed to protecting user data. This policy explains how information is handled when using the application.</p>
+<p>We respect your privacy and are committed to protecting your data.</p>
 </div>
 
-<div class="card">
+<div class="card fade">
 <h2>2. Information We Collect</h2>
 
-<p><strong>Device Data:</strong> Device type, OS version, and general usage data.</p>
+<p><strong>Device Data:</strong> Basic device info.</p>
 
-<p><strong>Notification Access:</strong> The app may access notifications from social apps to provide features such as content generation (e.g., bio suggestions).</p>
+<p><strong>Notification Access:</strong> Used for smart features.</p>
+<div class="warning">We do NOT store or share notifications.</div>
 
-<div class="warning">
-We do NOT store, transmit, or share notification content outside the user's device.
-</div>
-
-<p><strong>File Access:</strong> The app may access local storage to display and save WhatsApp status files.</p>
-
-<div class="warning">
-Files are processed locally and never uploaded to any server.
-</div>
+<p><strong>File Access:</strong> Used for WhatsApp status.</p>
+<div class="warning">Files stay on your device only.</div>
 
 </div>
 
-<div class="card">
-<h2>3. How We Use Data</h2>
-<p>We use collected data to:</p>
+<div class="card fade">
+<h2>3. Usage</h2>
 <ul>
-<li>Provide app features</li>
-<li>Improve performance</li>
-<li>Fix bugs</li>
+<li>App features</li>
+<li>Performance</li>
+<li>Bug fixes</li>
 </ul>
 </div>
 
-<div class="card">
-<h2>4. Third-Party Services</h2>
-<p>This app may use third-party services including:</p>
+<div class="card fade">
+<h2>4. Third-Party</h2>
 <ul>
-<li>Firebase (analytics & performance)</li>
-<li>AdMob (advertising)</li>
+<li>Firebase</li>
+<li>AdMob</li>
 </ul>
-<p>These services may collect data according to their own privacy policies.</p>
 </div>
 
-<div class="card">
+<div class="card fade">
 <h2>5. Data Sharing</h2>
-<p>We do not sell user data.</p>
-<p>Non-personal data may be shared with analytics and advertising providers.</p>
+<p>No selling of data.</p>
 </div>
 
-<div class="card">
-<h2>6. Data Security</h2>
-<p>We implement reasonable security measures, but no method is 100% secure.</p>
+<div class="card fade">
+<h2>6. Security</h2>
+<p>Reasonable protection applied.</p>
 </div>
 
-<div class="card">
-<h2>7. Children’s Privacy</h2>
-<p>This app is not intended for children under 13.</p>
+<div class="card fade">
+<h2>7. Children</h2>
+<p>Not for under 13.</p>
 </div>
 
-<div class="card">
-<h2>8. User Control</h2>
-<p>Users can disable permissions anytime via device settings.</p>
+<div class="card fade">
+<h2>8. Control</h2>
+<p>You can disable permissions anytime.</p>
 </div>
 
-<div class="card">
-<h2>9. Changes to This Policy</h2>
-<p>We may update this policy. Changes will be reflected on this page.</p>
+<div class="card fade">
+<h2>9. Updates</h2>
+<p>This policy may change.</p>
 </div>
 
-<div class="card">
+<div class="card fade">
 <h2>10. Contact</h2>
-<p>Email: your@email.com</p>
+<p>Email: zoherbaki6@gmail.com</p>
 </div>
 
 <div class="footer">
-<p>© 2026 Social Tools. All rights reserved.</p>
+© 2026 Social Tools
 </div>
 
 </div>
